@@ -1,7 +1,7 @@
 # drawing-in-sed
 
 A simple drawing program written in [GNU] sed. Takes a textual stream of commands as input and
-produces a *.pgm file as output (N.B, not an ASCII-art, but an actual image!).
+produces a *.pgm file as output (N.B., not an ASCII-art, but an actual image!).
 
 Usage:
 ```bash
