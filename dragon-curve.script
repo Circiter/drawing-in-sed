@@ -1,0 +1,4 @@
+# Dragon curve L-system.
+size w=150; h=205;
+goto x=53; y=155;
+lsys depth=9; axiom=FX; rule=X::X+YF+; rule=Y::-FX-Y;

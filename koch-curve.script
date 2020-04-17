@@ -1,0 +1,4 @@
+# Koch curve L-system.
+size w=255; h=500;
+goto x=5; y=5;
+lsys depth=5; axiom=F; rule=F::F+F-F-F+F;
