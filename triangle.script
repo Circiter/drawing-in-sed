@@ -1,4 +1,5 @@
-goto x=111111111; y=111111;
-line dx=1; dy=1; length=1111111;
-line dx=-1; dy=; length=11111111111111;
-line dx=1; dy=-1; length=1111111;
+size w=22; h=22;
+goto x=9; y=6;
+line dx=1; dy=1; length=7;
+line dx=-1; dy=0; length=14;
+line dx=1; dy=-1; length=7;

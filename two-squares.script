@@ -1,12 +1,19 @@
-goto x=11; y=11;
-line dx=1; dy=; length=1111111111;
-line dx=; dy=1; length=1111111111;
-line dx=-1; dy=; length=1111111111;
-line dx=; dy=-1; length=1111111111;
-goto x=1111111; y=1111111;
-line dx=1; dy=; length=1111111111;
-line dx=; dy=1; length=1111111111;
-line dx=-1; dy=; length=1111111111;
-line dx=; dy=-1; length=1111111111;
-goto x=11111111; y=11111111;
+size w=22; h=22;
+
+# Draw a small square.
+goto x=2; y=2;
+line dx=1; dy=0; length=10;
+line dx=0; dy=1; length=10;
+line dx=-1; dy=0; length=10;
+line dx=0; dy=-1; length=10;
+
+# Draw another one (slightly shifted).
+goto x=7; y=7;
+line dx=1; dy=0; length=10;
+line dx=0; dy=1; length=10;
+line dx=-1; dy=0; length=10;
+line dx=0; dy=-1; length=10;
+
+# Flood-fill the intersection.
+goto x=8; y=8;
 fill
