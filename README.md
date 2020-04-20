@@ -22,14 +22,38 @@ fbi image.pgm
 # you can pipe a image directly:
 cat triangle.script | ./draw.sed | display
 ```
-As an example, the content of `triangle.script`
-(note the usage of unary numbers in current early release):
+As an example, the content of `triangle.script`:
 ```
 size w=22; h=22;
 goto x=9; y=6;
 line dx=1; dy=1; length=7;
 line dx=-1; dy=0; length=14;
 line dx=1; dy=-1; length=7;
+```
+
+Supported syntax for commands:
+```
+# Set the canvas size; I recommend to
+# use this instruction only once and at
+# the beginning of a script).
+size w=<width>; h=<height>;
+
+# Draw a line from current position
+# using given slope and length;
+line dx=<dx>; dy=<dy>; length=<length>;
+
+# Set current position of the "turtle":
+goto x=<left_offset>; y=<top_offset>;
+
+# Flood fill an area:
+fill
+
+# Produce a graphics using L-system with given parameters.
+# (There can be more than one rule, one for each variable.
+# For a constant `A` the identity production
+# `A->A` is assumed by default.)
+# N.B., currently the characters `^,_$@<>` are forbidden in an input script.
+lsys depth=<recursion_depth>; axiom=<initial_configuration>; rule=<var>::<production>;
 ```
 
 See the source code (`draw.sed`) and example scripts (`triangle.script`,
